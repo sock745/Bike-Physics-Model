@@ -1,1 +1,1 @@
-fdhajkl
+print ("test")
