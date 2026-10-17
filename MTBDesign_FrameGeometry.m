@@ -15,7 +15,7 @@
 clc; clear; close all;
 
 % Github
-cd("/Users/danwanthj/Documents/Projects/MTB")
+cd("/Users/danwanthj/Documents/Projects/MTB");
 repo = gitrepo;
 pull(repo);
 
