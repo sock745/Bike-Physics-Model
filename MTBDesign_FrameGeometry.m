@@ -123,12 +123,12 @@ fprintf('%-22s %10.1f\n',        'Ground trail [mm]', c);
 
 %% Push to Github
 % Check Stage and Commit
-status(repo)
-add(repo, "MTBDesign_FrameGeometry.m");
-commit(repo, Message="pushed frame geometry");
-
-% Push
-pull(repo);
-push(repo);
+% status(repo)
+% add(repo, "MTBDesign_FrameGeometry.m");
+% commit(repo, Message="pushed frame geometry");
+% 
+% % Push
+% pull(repo);
+% push(repo);
 
 %% Debugging
