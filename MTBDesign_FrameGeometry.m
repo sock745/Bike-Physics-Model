@@ -124,7 +124,8 @@ fprintf('%-22s %10.1f\n',        'Ground trail [mm]', c);
 %% Push to Github
 repo = gitrepo;
 add(repo, "MTBDesign_FrameGeometry.m");
-commit(repo, Message="geometry: remove git commands from script");
+commit(repo, Message="geometry: pushed updated file with github commands");
 push(repo);
+
 
 %% Debugging
