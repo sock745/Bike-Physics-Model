@@ -11,7 +11,13 @@
 
 
 %% Houskeeping
+% Clean up workspace
 clc; clear; close all;
+
+% Github
+cd("/Users/danwanthj/Documents/Projects/MTB")
+repo = gitrepo;
+pull(repo);
 
 
 %% Known Variables
@@ -114,5 +120,15 @@ fprintf('%-22s %10.1f\n',        'Reach [mm]',        Re);
 fprintf('%-22s %10.1f\n',        'Mech. trail [mm]',  tm);
 fprintf('%-22s %10.1f\n',        'Ground trail [mm]', c);
 
+
+%% Push to Github
+% Check Stage and Commit
+status(repo)
+add(repo, "MTBDesign_FrameGeometry.m");
+commit(repo, Message="pushed frame geometry");
+
+% Push
+pull(repo);
+push(repo);
 
 %% Debugging
