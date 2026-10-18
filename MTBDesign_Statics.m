@@ -12,11 +12,6 @@
 % Clean up workspace
 clc; clear; close all;
 
-% Github
-cd("/Users/danwanthj/Documents/Projects/MTB");
-repo = gitrepo;
-pull(repo);
-
 % Structure
 data = struct();
 
@@ -35,7 +30,7 @@ m = mRider + mBike;
 
 % CoM Location
 xG = 30; % from BB; placeholder; need anthropometric model [mm]
-yG = 150; % from BB; placeholder; need anthropometric model [mm]
+yG = 750; % from BB; placeholder; need anthropometric model [mm]
 xp = xG - RPos(1); % distance from rear contact
 h = yG + hBB; % height above ground
 
@@ -49,8 +44,6 @@ mu = 0.7; % tire ground friction [-]
 % Angles
 thD = 0:5:35; % descent angle [deg]
 thC =  0:5:30; % ascent angle [deg]
-
-
 
 
 %% Statics
@@ -122,12 +115,6 @@ for k = 1:numel(data.climb.th)
         ok{data.climb.frontDown(k)+1}, ok{data.climb.tractionOK(k)+1});
 end
 fprintf('=================================================\n');
-
-%% Push to Github
-repo = gitrepo;
-add(repo, "MTBDesign_Statics.m");
-commit(repo, Message="statics solved, one failure exists!");
-push(repo);
 
 
 %% Debugging
