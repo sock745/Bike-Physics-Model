@@ -18,7 +18,7 @@ gitsync =  'MTBDesign_GitSync.m';
 cd("/Users/danwanthj/Documents/Projects/MTB");
 repo = gitrepo;
 pull(repo);
-add(repo, gitsync);
-msg = 'github removed within file! migrated to gitsync!';
-commit(repo, Files=gitsync, Message=msg);
+add(repo, gitsync); % update second item
+msg = 'new way to commit to github!';
+commit(repo, Files=gitsync, Message=msg); % update Files entry
 push(repo);
