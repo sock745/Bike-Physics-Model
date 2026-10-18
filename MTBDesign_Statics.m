@@ -60,7 +60,7 @@ data.level.frontFrac = xp / w; % fraction of weight on front [-]
 % Descending & Braking (ground tilted down by thD)
 data.desc.th = thD;
 data.desc.Nf = 1 / w * (m * g * (sind(thD) * h + cosd(thD) * xp) + m * aBrake * h); % front normal force [N]
-data.desc.Nr = m * g * cosd(thD) - Nf; % rear normal force [N]
+data.desc.Nr = m * g * cosd(thD) - data.desc.Nf; % rear normal force [N]
 data.desc.brakingFReq = m * aBrake + m * g * sind(thD); % braking force needed [N]
 data.desc.muReq = data.desc.brakingFReq / (m * g * cosd(thD)); % [-]
 data.desc.aMaxg = (xp * cosd(thC) - h * sind(thC)) / h; % pitch-over decel / g [gs]
