@@ -114,6 +114,3 @@ fprintf('%-22s %10.1f\n',        'Stack [mm]',        S);
 fprintf('%-22s %10.1f\n',        'Reach [mm]',        Re);
 fprintf('%-22s %10.1f\n',        'Mech. trail [mm]',  tm);
 fprintf('%-22s %10.1f\n',        'Ground trail [mm]', c);
-
-
-%% Debugging
