@@ -115,6 +115,3 @@ for k = 1:numel(data.climb.th)
         ok{data.climb.frontDown(k)+1}, ok{data.climb.tractionOK(k)+1});
 end
 fprintf('=================================================\n');
-
-
-%% Debugging
