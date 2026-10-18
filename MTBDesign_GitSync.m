@@ -9,10 +9,16 @@
 clc; clear; close all;
 
 %% MTB Git Sync
+% Files
+statics = 'MTBDesign_Statics.m';
+frameGeom = 'MTBDesign_FrameGeometry.m';
+gitsync =  'MTBDesign_GitSync.m';
+
+% Push to Github
 cd("/Users/danwanthj/Documents/Projects/MTB");
 repo = gitrepo;
 pull(repo);
-add(repo, ["MTBDesign_FrameGeometry.m", "MTBDesign_Statics.m", "MTBDesign_GitSync.m"]);
-msg = 'github within files removed! statics solved! gitsync created!';
+add(repo, gitsync);
+msg = 'github within files removed! gitsync created!';
 commit(repo, Message=msg);
 push(repo);
