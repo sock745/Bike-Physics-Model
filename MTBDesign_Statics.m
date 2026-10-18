@@ -25,6 +25,9 @@ data = struct();
 % Bring in Geometry Data
 run('MTBDesign_FrameGeometry.m'); 
 
+% Gravity
+g = 9.81; % [m/s^2]
+
 % Masses
 mRider = 82; % rider mass; standard value [kg]
 mBike = 17; % projected bike mass [kg]
@@ -37,8 +40,8 @@ xp = xG - RPos(1); % distance from rear contact
 h = yG + hBB; % height above ground
 
 % Accelerations
-aBrake = 0.5; % braking [gs]
-aAccel = 0; % steady climb [gs]
+aBrake = 0.5 * g; % braking [m/s^2]
+aAccel = 0 * g; % steady climb [m/s^2]
 
 % Friction
 mu = 0.7; % tire ground friction [-]
@@ -47,8 +50,7 @@ mu = 0.7; % tire ground friction [-]
 thD = 0:5:35; % descent angle [deg]
 thC =  0:5:30; % ascent angle [deg]
 
-% Gravity
-g = 9.81; % [m/s^2]
+
 
 
 %% Statics
