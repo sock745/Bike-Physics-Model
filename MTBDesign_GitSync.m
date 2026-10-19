@@ -13,12 +13,15 @@ clc; clear; close all;
 statics = 'MTBDesign_Statics.m';
 frameGeom = 'MTBDesign_FrameGeometry.m';
 gitsync =  'MTBDesign_GitSync.m';
+latdyn = 'MTBDesign_LateralDynamics.m';
+whipple = 'whipple_pull_force_abcd.m';
 
 % Push to Github
 cd("/Users/danwanthj/Documents/Projects/MTB");
 repo = gitrepo;
 pull(repo);
 add(repo, gitsync); % update second item
-msg = 'new way to commit to github!';
+msg = 'Added code completion message and new file variables.';
 commit(repo, Files=gitsync, Message=msg); % update Files entry
 push(repo);
+disp("Successfully pushed to Github!");
