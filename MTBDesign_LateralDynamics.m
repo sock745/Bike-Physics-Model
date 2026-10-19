@@ -12,9 +12,6 @@
 % (whipple_pull_force_abcd, the function bicycle_state_space calls) to find
 % the self-stable speed range, low-speed instability, weave frequency, and
 % steady-turn handlebar torque.
-%
-% Requires: HumanControl repo (github.com/moorepants/HumanControl)
-%           Control System Toolbox is NOT needed (matrices used directly)
 % -------------------------------------------------------------------------
 
 
@@ -28,12 +25,12 @@ clc; clear; close all;
 run('MTBDesign_FrameGeometry.m');
 
 % HumanControl location (folder containing whipple_pull_force_abcd.m)
-hcPath = "/Users/danwanthj/Documents/Projects/HumanControl";
+hcPath = "/Users/danwanthj/Documents/Projects/MTB";
 addpath(hcPath);
 
 % Options
 runBenchmarkCheck = true; % verify engine against Meijaard 2007 first
-writeParFile = true; % also write <hcPath>/parameters/MTBDesignPar.txt
+writeParFile = false; % also write <hcPath>/parameters/MTBDesignPar.txt
 
 % Gravity
 g = 9.81; % [m/s^2]
